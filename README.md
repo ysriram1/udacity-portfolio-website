@@ -10,4 +10,5 @@ Built a website using HTML and CSS based on the design pdf provided
 - Please download this repo and open the index.html to view the website
 
  **Here is a screenshot**
-[screenshot]: https://github.com/ysriram1/udacity-portfolio-website/blob/master/website_screenshot.PNG
+
+![screenshot](https://github.com/ysriram1/udacity-portfolio-website/blob/master/website_screenshot.PNG)
