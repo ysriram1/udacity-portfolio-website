@@ -1,6 +1,6 @@
 
 		body{
-			margin-bottom: 30px; /* want some space before end of page */
+      box-sizing: border-box;
 		}
 
 		img{
@@ -25,7 +25,6 @@
 		.tagline{
 			font-size: 100%;
 			display: inline-block;
-			box-sizing: border-box;
 		}
 
 		.my_name{
@@ -58,39 +57,25 @@
 		/*Related to main space with image and featured work*/
 
 		main{ /*TODO: Why is main not auto re-sizing to the actual height? */
-			margin-bottom: 350px;
+
 		}
 
 		.main_image{
 			position: relative;
 			top: 20px;
 			width: 80%;
-			clear:both;
-			margin-left: 10%;
-			margin-right: 10%;
-		}
-
-		.featured_work{
-			position: relative;
-			top:40px;
-			margin-left: 10%;
-			min-width: 100px;
+      margin:auto;
 		}
 
 		.featured_work_title{
 			color: #7d97ad;
 			font-size: 30px;
+      text-align: center;
 		}
 
-		.featured_work_title::first-letter{
-			font-size: 120%;
-		}
-
-		.featured_work_option{
-				width: 30%;
-				padding: 10px;
-				float:left;
-		}
+    .side_info{
+      text-align: center;
+    }
 
 		a.button{
 			position: relative;
@@ -107,16 +92,34 @@
 			background-color: #1334e0;
 		}
 
-		/* TODO: Related to the footer */
-		/*.footer_text{
-			margin-right: 50%;
-		}*/
+    /* for the flex-box */
+    .grid{
+      display: flex;
+    }
+
+    .grid-cell{
+      padding-top: 100%; /* for 1:1 aspect ratio */
+      padding: 2.5%;
+      width: 33%; /*need to specify width since each image is of diff resolution */
+      margin: auto;
+    }
+
+		/* Related to the footer */
+    footer{
+      text-align: center;
+      height: 100px;
+      bottom:0px;
+    }
+
+		.footer_text{
+      margin-top: 5%;
+      font-size: 18px;
+		}
 
 		/* media queries to alter the size of text when screen size is changed */
 		@media only screen and (max-width : 700px) {
 			.name{
 				font-size: 7px;
-				margin-right: 20%;
 			}
 
 			.logo{
@@ -124,16 +127,32 @@
 				margin-left: 10%;
 			}
 
-			.featured_work_title{
-				font-size: 30px;
-				margin-left: 25%;
-			}
+      .featured_work_title{
+        font-size: 30px;
+        margin-left: 25%;
+        margin: auto;
+      }
 
-			.featured_work_option{
+      .grid{
+        flex-wrap: wrap;
+      }
+
+      .grid-cell{
+        width: 60%;
+        margin: auto;
+      }
+
+      a.button{
+        font-size: 15px;
+      }
+
+
+
+			/*.featured_work_option{
 				clear: both;
 				float:none;
 				margin: 10%;
 				width: 70%;
 				margin-top: 0px;
-			}
+			}*/
 		}
